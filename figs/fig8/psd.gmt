@@ -1,0 +1,65 @@
+#!/bin/bash
+gmt gmtset MAP_GRID_PEN_PRIMARY	= 0.1p,0/0/0,2_1_0.25_1:0
+ps=sd.ps
+
+gmt grdfft depth_case1.nc -Er+wk+n  -Gdepth_case1.txt
+gmt grdfft depth_case2.nc -Er+wk+n -Gdepth_case2.txt
+gmt grdfft etop.nc -Er+wk+n -Gdepth_case3.txt
+gmt grdfft depth_case8.nc -Er+wk+n -Gdepth_case8.txt
+gmt grdfft depth_case7.nc -Er+wk+n -Gdepth_case7.txt
+gmt grdfft ggm.grd -Er+wk+n -Gdepth_case0.txt
+
+gmt psxy -R3/300/1e-6/1e4 depth_case1.txt -JX-4l/6l -BWS -Bya1p+l"Power spectrum density" -Bxa1f3p+l"wavelength(km) in radial direction" -W0.5p,red, -K > $ps
+gmt psxy -R depth_case2.txt -JX  -W0.5p,blue, -O -K>> $ps
+
+gmt psxy -R depth_case7.txt -JX  -W0.5p,241/145/69 -O -K>> $ps
+gmt psxy -R depth_case8.txt -JX  -W0.5p,gray, -O -K >> $ps
+gmt psxy -R depth_case0.txt -JX  -W0.5p,black, -O -K >> $ps
+gmt psxy -R depth_case3.txt -JX  -W0.5p,green, -O -K >> $ps
+
+echo S 0.5c - 1c - .5p,black 1.1c GGM >le.d
+echo S 0.5c - 1c - .5p,red 1.1c case1 >>le.d
+echo S 0.5c - 1c - .5p,blue 1.1c case2 >>le.d
+echo S 0.5c - 1c - .5p,241/145/69 1.1c case7 >>le.d
+echo S 0.5c - 1c - .5p,gray 1.1c case8 >>le.d
+echo S 0.5c - 1c - .5p,green 1.1c ETOP1 >>le.d
+
+gmt pslegend -D+w1.0i+jBL+o2c/4.0c -R -J -O  --FONT_ANNOT_PRIMARY=7p le.d -K >> $ps
+echo 300 1e-6 "(a)"| gmt pstext -F+f8p,Helvetica,red+jBL -R -J -To -P -K -O -D0.05 -Wwhite -Gwhite >> $ps
+
+
+gmt grdfft depth_case1.nc -Ex+wk+n  -Gdepth_case1.txt
+gmt grdfft depth_case2.nc -Ex+wk+n -Gdepth_case2.txt
+gmt grdfft etop.nc -Ex+wk+n -Gdepth_case3.txt
+gmt grdfft depth_case8.nc -Ex+wk+n -Gdepth_case8.txt
+gmt grdfft depth_case7.nc -Ex+wk+n -Gdepth_case7.txt
+gmt grdfft ggm.grd -Ex+wk+n -Gdepth_case0.txt
+
+gmt psxy -R3/300/1e-6/1e4 depth_case1.txt -JX-4l/6l -BWS -Bya1p -Bxa1f3p+l"wavelength(km) in x direction" -W0.5p,red, -K -O -X5.5c >> $ps
+gmt psxy -R depth_case2.txt -JX  -W0.5p,blue, -O -K>> $ps
+
+gmt psxy -R depth_case7.txt -JX  -W0.5p,241/145/69 -O -K>> $ps
+gmt psxy -R depth_case8.txt -JX  -W0.5p,gray, -O -K >> $ps
+gmt psxy -R depth_case0.txt -JX  -W0.5p,black, -O -K >> $ps
+gmt psxy -R depth_case3.txt -JX  -W0.5p,green, -O -K >> $ps
+
+echo 300 1e-6 "(b)"| gmt pstext -F+f8p,Helvetica,red+jBL -R -J -To -P -K -O -D0.05 -Wwhite -Gwhite >> $ps
+
+gmt grdfft depth_case1.nc -Ey+wk+n  -Gdepth_case1.txt
+gmt grdfft depth_case2.nc -Ey+wk+n -Gdepth_case2.txt
+gmt grdfft etop.nc -Ey+wk+n -Gdepth_case3.txt
+gmt grdfft depth_case8.nc -Ey+wk+n -Gdepth_case8.txt
+gmt grdfft depth_case7.nc -Ey+wk+n -Gdepth_case7.txt
+gmt grdfft ggm.grd -Ey+wk+n -Gdepth_case0.txt
+
+gmt psxy -R3/300/1e-6/1e4 depth_case1.txt -JX-4l/6l -BWS -Bya1p -Bxa1f3p+l"wavelength(km) in y direction" -W0.5p,red, -K -O -X5.5c >> $ps
+gmt psxy -R depth_case2.txt -JX  -W0.5p,blue, -O -K>> $ps
+
+gmt psxy -R depth_case7.txt -JX  -W0.5p,241/145/69 -O -K>> $ps
+gmt psxy -R depth_case8.txt -JX  -W0.5p,gray, -O -K >> $ps
+gmt psxy -R depth_case0.txt -JX  -W0.5p,black, -O -K >> $ps
+gmt psxy -R depth_case3.txt -JX  -W0.5p,green, -O -K >> $ps
+
+echo 300 1e-6 "(c)"| gmt pstext -F+f8p,Helvetica,red+jBL -R -J -To -P -O -D0.05 -Wwhite -Gwhite >> $ps
+
+gmt psconvert $ps -A -P -Tf
