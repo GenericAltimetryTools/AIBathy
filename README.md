@@ -19,7 +19,7 @@ To use this code, you will need to have Python and several Python libraries inst
 If you find this code useful in your research, please consider citing it. You can use the following citation:
 
 ```
-[1] AIBathy[CP/OL]. The Generic Altimetry Tools, 2022[2021-10-05]. Available: https://github.com/GenericAltimetryTools/AIBathy.
+[1] AIBathy[CP/OL]. The Generic Altimetry Tools, 2022[2022-10-05]. Available: https://github.com/GenericAltimetryTools/AIBathy.
 ```
 
 ## Contact
