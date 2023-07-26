@@ -1,4 +1,4 @@
-# AIBathy: Ocean Bathymetry Prediction Using Deep Learning
+# AIBathy: Recovering Bathymetry from Satellite Altimetry-derived Gravity by Fully Connected Deep Neural Network (FC-DNN)
 
 Welcome to the AIBathy project! This project uses deep learning techniques to predict ocean bathymetry. 
 
