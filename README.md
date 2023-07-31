@@ -5,6 +5,17 @@ Welcome to the AIBathy project! This project uses deep learning techniques to pr
 ## Paper
 
 We have submitted a paper detailing the methods and results of this project to a scientific journal. The paper is currently under review. We will update this section with the citation details once the paper is published.
+```
+@article{yang_recovering_2023,
+	title = {Recovering {Bathymetry} from {Satellite} {Altimetry}-derived {Gravity} by {Fully} {Connected} {Deep} {Neural} {Network}},
+	volume = {Under Review},
+	language = {en},
+	journal = {IEEE Geoscience and Remote Sensing Letters},
+	author = {Yang, Lei and Liu, Min and Liu, Na and Guo, Jinyun and Lin, Lina and Zhang, Yuyuan and Du, Xin and Xu, Yongsheng and Zhu, Chengcheng and Wang, Yongkang},
+	year = {2023},
+}
+
+```
 
 ## Code
 
@@ -19,7 +30,18 @@ To use this code, you will need to have Python and several Python libraries inst
 If you find this code useful in your research, please consider citing it. You can use the following citation:
 
 ```
-[1] AIBathy[CP/OL]. The Generic Altimetry Tools, 2022[2022-10-05]. Available: https://github.com/GenericAltimetryTools/AIBathy.
+@misc{lei_aibathy_2023,
+	title = {{AIBathy}},
+	copyright = {MIT},
+	url = {https://github.com/GenericAltimetryTools/AIBathy},
+	abstract = {Ocean bathymetry predication by Deep Learning},
+	urldate = {2023-07-25},
+	publisher = {The Generic Altimetry Tools},
+	author = {Lei, Yang and Yuyuan, Zhang},
+	month = jun,
+	year = {2023},
+	note = {original-date: 2022-10-05T10:28:32Z},
+}
 ```
 
 ## Contact
