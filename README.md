@@ -4,7 +4,7 @@ Welcome to the AIBathy project! This project uses deep learning techniques to pr
 
 ## Paper
 
-We have submitted a paper detailing the methods and results of this project to a scientific journal. The paper is currently under review. We will update this section with the citation details once the paper is published.
+We have submitted a paper detailing the methods and results of this project to a scientific journal. The paper is accepted now (DOI: 10.1109/LGRS.2023.3302992). We will update this section with the citation details once the paper is published.
 ```
 @article{yang_recovering_2023,
 	title = {Recovering {Bathymetry} from {Satellite} {Altimetry}-derived {Gravity} by {Fully} {Connected} {Deep} {Neural} {Network}},
