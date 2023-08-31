@@ -7,12 +7,14 @@ Welcome to the AIBathy project! This project uses deep learning techniques to pr
 We have submitted a paper detailing the methods and results of this project to a scientific journal. The paper is accepted now (DOI: 10.1109/LGRS.2023.3302992). We will update this section with the citation details once the paper is published.
 ```
 @article{yang_recovering_2023,
-	title = {Recovering {Bathymetry} from {Satellite} {Altimetry}-derived {Gravity} by {Fully} {Connected} {Deep} {Neural} {Network}},
-	volume = {Under Review},
-	language = {en},
+	title = {Recovering {Bathymetry} {From} {Satellite} {Altimetry}-{Derived} {Gravity} by {Fully} {Connected} {Deep} {Neural} {Network}},
+	volume = {20},
+	issn = {1558-0571},
+	doi = {10.1109/LGRS.2023.3302992},
 	journal = {IEEE Geoscience and Remote Sensing Letters},
-	author = {Yang, Lei and Liu, Min and Liu, Na and Guo, Jinyun and Lin, Lina and Zhang, Yuyuan and Du, Xin and Xu, Yongsheng and Zhu, Chengcheng and Wang, Yongkang},
+	author = {Yang, Lei and Liu, Min and Liu, Na and Guo, Jinyun and Lin, Lina and Zhang, Yuyuan and Du, Xing and Xu, Yongsheng and Zhu, Chengcheng and Wang, Yongkang},
 	year = {2023},
+	pages = {1--5},
 }
 
 ```
