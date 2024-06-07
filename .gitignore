@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# 文件
+*.nc
+*.grd
+
 # Distribution / packaging
 .Python
 build/
